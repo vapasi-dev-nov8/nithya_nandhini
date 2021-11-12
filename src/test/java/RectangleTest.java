@@ -13,7 +13,7 @@ class RectangleTest {
     // To handle null inputs
     @Test
     void handlingNullInputs() {
-        assertEquals(0, Rectangle.calculateArea(null,null));
+        assertEquals(0, Rectangle.calculateArea(0.0,0.0));
     }
 
 }
