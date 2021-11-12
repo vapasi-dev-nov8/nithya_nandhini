@@ -15,8 +15,7 @@ public class Rectangle {
     // Method to calculate area of rectangle
     public double area() {
         if(length > 0.0 && breadth > 0.0){
-            double area = length * breadth;
-            return area;
+            return length * breadth;
         }
         System.out.println("Please provide valid inputs");
         return 0;
@@ -24,8 +23,7 @@ public class Rectangle {
     //method to calculate perimeter
     public double perimeter() {
         if(length > 0.0 && breadth > 0.0) {
-            double perimeter = 2 * (length + breadth);
-            return perimeter;
+            return 2 * (length + breadth);
         }
         System.out.println("Please provide valid inputs");
         return 0;
