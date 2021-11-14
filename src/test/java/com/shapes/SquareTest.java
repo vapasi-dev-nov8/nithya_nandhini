@@ -1,6 +1,5 @@
 package com.shapes;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -12,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class SquareTest {
     // Test condition for area
     @ParameterizedTest
-    @MethodSource("provideSideForArea")
-    void shouldCalculateAreaofSquare(double side, double expectedArea) {
+    @MethodSource("provideSidesForArea")
+    void shouldCalculateAreaOfSquare(double side, double expectedArea) {
         // Given
         Square square = new Square(side);
 
@@ -24,7 +23,7 @@ class SquareTest {
         assertEquals(expectedArea, actualArea);
     }
 
-    private static Stream<Arguments> provideSideForArea() {
+    private static Stream<Arguments> provideSidesForArea() {
         return Stream.of(
                 Arguments.of(2.0,4.0),
                 Arguments.of(0.0, 0.0),
@@ -34,8 +33,8 @@ class SquareTest {
 
     //Test Condition for Perimeter
     @ParameterizedTest
-    @MethodSource("provideSidesPerimeter")
-    void shouldCalculatePerimeterofSquare(double side, double expectedPerimeter) {
+    @MethodSource("provideSidesForPerimeter")
+    void shouldCalculatePerimeterOfSquare(double side, double expectedPerimeter) {
         // Given
         Square square = new Square(side);
 
@@ -46,7 +45,7 @@ class SquareTest {
         assertEquals(expectedPerimeter, actualPerimeter);
     }
 
-    private static Stream<Arguments> provideSidesPerimeter() {
+    private static Stream<Arguments> provideSidesForPerimeter() {
         return Stream.of(
                 Arguments.of(2.0,8.0),
                 Arguments.of(0.0, 0.0),

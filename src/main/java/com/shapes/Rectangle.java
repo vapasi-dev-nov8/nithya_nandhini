@@ -17,7 +17,6 @@ public class Rectangle {
         if(length > 0.0 && breadth > 0.0){
             return length * breadth;
         }
-        System.out.println("Please provide valid inputs");
         return 0;
     }
     //method to calculate perimeter
@@ -25,7 +24,6 @@ public class Rectangle {
         if(length > 0.0 && breadth > 0.0) {
             return 2 * (length + breadth);
         }
-        System.out.println("Please provide valid inputs");
         return 0;
     }
 }
